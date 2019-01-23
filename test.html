@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lol</title>
+	<link rel="stylesheet" type="text/css" href="test.css">
+</head>
+<body>
+	<dialog id="favDialog">
+		<img src="croix.png" onclick="Javascript:window.document.location.href='test.html';"" class="img">
+	<form method="dialog">
+    <p><label>Vous devez valider pour acceder au site !
+    </label></p>
+
+    <menu>
+      <button onclick="twFermer()">Faites moi sortir d'içi !</button>
+      <button onclick="twValider()">Valider</button>
+    </menu>
+    
+  </form>
+</dialog>
+<menu>
+  <button id="updateDetails" class="button">Acceder au site</button>
+</menu>
+
+<output></output>
+
+<script type="text/javascript">
+	(function() {
+  var updateButton = document.getElementById('updateDetails');
+  var favDialog = document.getElementById('favDialog');
+  var outputBox = document.getElementsByTagName('output')[0];
+
+  // “Update details” button opens the <dialog> modally
+  updateButton.addEventListener('click', function() {
+    favDialog.showModal();
+  });
+})();
+
+function twFermer() {
+  window.close();
+}
+
+function twValider() {
+	window.write("Validé");
+}
+</script>
+
+</body>
+</html>
