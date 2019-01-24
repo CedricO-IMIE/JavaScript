@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>lol</title>
-	<link rel="stylesheet" type="text/css" href="test.css">
-</head>
-<body>
-	<dialog id="favDialog">
-		<img src="croix.png" onclick="Javascript:window.document.location.href='test.html';"" class="img">
-	<form method="dialog">
-    <p><label>Vous devez valider pour acceder au site !
-    </label></p>
+	<head>
+		<title>JavaScript</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="test.css">
+	</head>
+	<body>
 
-    <menu>
-      <button onclick="twFermer()">Faites moi sortir d'içi !</button>
-      <button onclick="twValider()">Valider</button>
-    </menu>
-    
-  </form>
-</dialog>
-<menu>
-  <button id="updateDetails" class="button">Acceder au site</button>
-</menu>
+		<dialog id="favDialog">
+			<img src="croix.png" onclick="Javascript:window.document.location.href='test.html';"" class="img">
+			<form method="dialog">
 
-<output></output>
+			    <p><label>Vous devez valider pour acceder au site.</label></p>
 
-<script type="text/javascript">
-	(function() {
-  var updateButton = document.getElementById('updateDetails');
-  var favDialog = document.getElementById('favDialog');
-  var outputBox = document.getElementsByTagName('output')[0];
+			    <menu>
+			      <button onclick="twFermer()">Faites moi sortir d'içi !</button>
+			      <button>Valider</button>
+			    </menu>
+		    
+			</form>
+		</dialog>
 
-  // “Update details” button opens the <dialog> modally
-  updateButton.addEventListener('click', function() {
-    favDialog.showModal();
-  });
-})();
+		<menu>
+		  <button id="updateDetails" class="button">Acceder au site</button>
+		</menu>
 
-function twFermer() {
-  window.close();
-}
+		<script type="text/javascript">
+			(function() {
+			  var updateButton = document.getElementById('updateDetails');
+			  var favDialog = document.getElementById('favDialog');
+			  var outputBox = document.getElementsByTagName('output')[0];
 
-function twValider() {
-	window.write("Validé");
-}
-</script>
+			  updateButton.addEventListener('click', function() {
+			    favDialog.showModal();
+			  });
 
-</body>
+			})();
+
+			function twFermer() {
+			  window.close();
+			}
+
+		</script>
+
+	</body>
 </html>
