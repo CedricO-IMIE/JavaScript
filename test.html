@@ -17,17 +17,28 @@
 				  <p>Adresse Mail</p>
 				  <script type="text/javascript" src="mailbox.js"></script>
 				  <input type="text" onblur="validateEmail(this);" />
-				  <button id='valid'>Valider</button>				
+				  <select>
+				  <option value="gmail">@gmail</option>
+				  <option value="outlook">@outlook</option>
+				  <option value="yopmail">@yopmail</option>
+				  <option value="wanadoo">@wanadoo</option>
+				  <option value="yahoo">@yahoo</option>
+				  </select>
+				  <select>
+				  <option value=".fr">.fr</option>
+				  <option value=".com">.com</option>
+				  <option value=".co">.co</option>
+				  <option value=".de">.de</option>
+				  </select>
+				  <button type='submit' id='valid'>Valider</button>	
+				  <p id="demo" style="color: red;"></p>				  
 				</form>
 
 				<h2 id='result'></h2>
 			    
-			    <menu>
-			      <button onclick="twFermer()">Faites moi sortir d'içi !</button>
-			    </menu>
 		    
 			</form>
-
+			
 		</dialog>
 
 		<menu>
