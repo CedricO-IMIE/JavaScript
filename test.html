@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<title>JavaScript</title>
@@ -9,39 +8,33 @@
 
 		<dialog id="favDialog">
 			<img src="croix.png" onclick="Javascript:window.document.location.href='test.html';"" class="img">
+			
 			<form method="dialog">
+				
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-			    <p><label>Vous devez valider pour acceder au site.</label></p>
+				<form>				  
+				  <p>Adresse Mail</p>
+				  <script type="text/javascript" src="mailbox.js"></script>
+				  <input type="text" onblur="validateEmail(this);" />
+				  <button type='submit' id='valid'>Valider</button>				
+				</form>
 
+				<h2 id='result'></h2>
+			    
 			    <menu>
 			      <button onclick="twFermer()">Faites moi sortir d'içi !</button>
-			      <button>Valider</button>
 			    </menu>
 		    
 			</form>
+			
 		</dialog>
 
 		<menu>
 		  <button id="updateDetails" class="button">Acceder au site</button>
 		</menu>
 
-		<script type="text/javascript">
-			(function() {
-			  var updateButton = document.getElementById('updateDetails');
-			  var favDialog = document.getElementById('favDialog');
-			  var outputBox = document.getElementsByTagName('output')[0];
-
-			  updateButton.addEventListener('click', function() {
-			    favDialog.showModal();
-			  });
-
-			})();
-
-			function twFermer() {
-			  window.close();
-			}
-
-		</script>
+		<script type="text/javascript" src="body.js"></script>
 
 	</body>
 </html>
